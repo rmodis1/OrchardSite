@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View;
 using OrchardSite.Data;
 using OrchardSite.Models;
 
@@ -21,9 +22,22 @@ namespace OrchardSite.Pages.ContactForm
 
         public IList<Contact> Contact { get;set; } = default!;
 
+        [BindProperty(SupportsGet = true)]
+        public string? SearchString { get; set;}
+
         public async Task OnGetAsync()
         {
-            Contact = await _context.Contact.ToListAsync();
+            var contacts = from contact in _context.Contact
+                           select contact;
+            
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                contacts = contacts.Where(contact => contact.FirstName.Contains(SearchString) || 
+                                                     contact.LastName.Contains(SearchString) || 
+                                                     contact.Message.Contains(SearchString));
+            }
+
+            Contact = await contacts.ToListAsync();
         }
     }
 }

@@ -564,3 +564,4 @@
 /Users/ryanmodisette/Documents/C#/Orchard/AnotherSite/OrchardSite/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Drawing.Common.dll
 /Users/ryanmodisette/Documents/C#/Orchard/AnotherSite/OrchardSite/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.dll
 /Users/ryanmodisette/Documents/C#/Orchard/AnotherSite/OrchardSite/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
+/Users/ryanmodisette/Documents/C#/Orchard/AnotherSite/OrchardSite/obj/Debug/net8.0/OrchardSite.sourcelink.json

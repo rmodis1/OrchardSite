@@ -96,7 +96,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrchardSite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d09e3b46ff80aac5a34c266eb9552259000d7063")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrchardSite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrchardSite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
