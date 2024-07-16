@@ -1,0 +1,18 @@
+@page "/blogpost/{slug}"
+@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var blogPost = await Orchard.GetContentItemByHandleAsync($"alias:{Slug}");
+}
+
+<h1>This is the blog post: @blogPost.DisplayText</h1>
+
+<p>@await Orchard.MarkdownToHtmlAsync((string) blogPost.Content.MarkdownBodyPart.Markdown)</p>
+
+@Orchard.ConsoleLog(blogPost)
+
+@functions
+{
+    [FromRoute]
+    public string Slug { get; set; }
+}
